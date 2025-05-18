@@ -1,5 +1,9 @@
 FROM python:3.13-alpine
 
+RUN apk update \
+    && apk add --no-cache nmap \
+    && rm -rf /var/lib/apt/lists/*
+
 # Set the working directory.
 WORKDIR /app
 
