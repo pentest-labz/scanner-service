@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_CREDENTIALS_ID = 'cbf5d4be-0b0d-499a-a184-196c2d80cf2b'
-        DOCKER_IMAGE = 'jeromejoseph/pentest-scanner'
+        DOCKER_IMAGE = 'jeromejoseph/scanner-service'
     }
 
     stages {
