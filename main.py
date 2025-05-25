@@ -29,12 +29,21 @@ app = FastAPI(
     description="Port scanner with multiple modes and input sanitization."
 )
 
+# origins = [
+#     "http://localhost:4000",
+#     "http://localhost:8000",
+#     "http://localhost:8001",
+#     "http://localhost:8002",
+#     "http://localhost:8003",
+# ]
+
 origins = [
-    "http://localhost:4000",
+    "http://orchestrator-ui:4000",
+    "http://bruteforce-service:5002",
     "http://localhost:8000",
-    "http://localhost:8001",
-    "http://localhost:8002",
-    "http://localhost:8003",
+    "http://scanner-service:8001",
+    "http://auth-service:8002",
+    "http://sql-exploit-service:5003",
 ]  
 app.add_middleware(
     CORSMiddleware,
